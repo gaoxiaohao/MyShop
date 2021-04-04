@@ -1,0 +1,4 @@
+# Project exclude paths
+/shop-admin/target/
+/shop-mbg/target/
+/shop-security/target/
