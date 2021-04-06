@@ -8,6 +8,17 @@ spring:
       enabled: true #开启文件上传
       max-file-size: 10MB #限制文件上传大小为10M
 
+  rabbitmq:
+    host: 47.93.99.36
+    port: 5672
+    username: shop
+    password: shop
+    virtual-host: /shop
+#    开启生产者确认机制
+    publisher-confirm-type: correlated
+server:
+  port: 8081
+
 mybatis:
   mapper-locations:
     - classpath:dao/*.xml

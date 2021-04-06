@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 /**
  * @author gxh
  */
-public class AdminUserDetails implements UserDetails {
+public class AdminUserDetails  implements UserDetails {
 
     private SAdmin admin;
     private List<SResource> resourceList;

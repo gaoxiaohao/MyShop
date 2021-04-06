@@ -9,8 +9,6 @@ import com.gxh.shop.service.TestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -35,7 +33,6 @@ public class TestController {
     public List<PProduct> listAll(){
         return testService.listAll();
     }
-
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Map login( @RequestParam String username,@RequestParam String password) {

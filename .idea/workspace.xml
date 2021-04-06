@@ -1,7 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5748dbde-d963-4e0e-81e0-b4ab3f2d01e1" name="Default Changelist" comment="" />
+    <list default="true" id="5748dbde-d963-4e0e-81e0-b4ab3f2d01e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/config/MySecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/ShopPortalApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/bo/RabbitEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/TtlReceive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/TtlSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/config/RabbitmqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/HomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/impl/HomeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/META-INF/shop-portal.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/RabbitEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/ShopPortalApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/FunoutReceive.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/RouteReceive.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/Sender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/TtlReceive.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/TtlSender$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/TtlSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/config/RabbitmqConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/controller/HomeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/HomeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/HomeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_4_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_4_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_sync_4_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_3_0_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/detail/AdminUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/detail/AdminUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/shop-portal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/shop-portal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/config/SecurityConfig.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,12 +73,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1qh6o7o7dqXIa8oQi1hQjQUFDSQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,6 +103,10 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -40,14 +114,20 @@
       <recent name="D:\MyShop\shop-mbg\src\main\java\com\gxh\shop" />
       <recent name="D:\MyShop\shop-mbg\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gxh.shop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyShop\shop-portal\src\main\resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShopAdminApplication">
+  <component name="RunManager" selected="Spring Boot.ShopPortalApplication">
     <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gxh.shop.Generator" />
       <module name="shop-mbg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gxh.shop.*" />
+          <option name="PATTERN" value="com.gxh.shop.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,8 +148,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShopPortalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="shop-portal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gxh.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gxh.shop.ShopPortalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ShopPortalApplication" />
         <item itemvalue="Spring Boot.ShopAdminApplication" />
         <item itemvalue="Application.Generator" />
       </list>
@@ -86,61 +180,148 @@
       <option name="presentableId" value="Default" />
       <updated>1617519646381</updated>
       <workItem from="1617519647699" duration="2675000" />
-      <workItem from="1617522359665" duration="15897000" />
+      <workItem from="1617522359665" duration="18301000" />
+      <workItem from="1617547510263" duration="1118000" />
+      <workItem from="1617629827271" duration="313000" />
+      <workItem from="1617633896435" duration="384000" />
+      <workItem from="1617669634426" duration="24006000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1617523774931">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1617633964021">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1617523774931" />
-    <state x="880" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1617542757193">
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1617633964021" />
+    <state x="880" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1617694847063">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="880" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1617542757193" />
-    <state width="1493" height="494" key="GridCell.Tab.0.bottom" timestamp="1617544479257">
+    <state x="880" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1617694847063" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617702814488">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="494" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617544479257" />
-    <state width="1493" height="494" key="GridCell.Tab.0.center" timestamp="1617544479257">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617702814488" />
+    <state x="640" y="310" key="Github.ShareDialog" timestamp="1617545277269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="494" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617544479257" />
-    <state width="1493" height="494" key="GridCell.Tab.0.left" timestamp="1617544479257">
+    <state x="640" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1617545277269" />
+    <state x="407" y="106" key="Github.UntrackedFilesDialog" timestamp="1617545369482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="494" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617544479257" />
-    <state width="1493" height="494" key="GridCell.Tab.0.right" timestamp="1617544479257">
+    <state x="407" y="106" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617545369482" />
+    <state width="1493" height="281" key="GridCell.Tab.0.bottom" timestamp="1617702659649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="494" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617544479257" />
-    <state width="1493" height="494" key="GridCell.Tab.1.bottom" timestamp="1617544479258">
+    <state width="1493" height="281" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
+    <state width="1493" height="281" key="GridCell.Tab.0.center" timestamp="1617702659649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="494" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617544479258" />
-    <state width="1493" height="494" key="GridCell.Tab.1.center" timestamp="1617544479257">
+    <state width="1493" height="281" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
+    <state width="1493" height="281" key="GridCell.Tab.0.left" timestamp="1617702659649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="494" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617544479257" />
-    <state width="1493" height="494" key="GridCell.Tab.1.left" timestamp="1617544479257">
+    <state width="1493" height="281" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
+    <state width="1493" height="281" key="GridCell.Tab.0.right" timestamp="1617702659649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="494" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617544479257" />
-    <state width="1493" height="494" key="GridCell.Tab.1.right" timestamp="1617544479257">
+    <state width="1493" height="281" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
+    <state width="1493" height="281" key="GridCell.Tab.1.bottom" timestamp="1617702659649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="494" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617544479257" />
-    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1617522478496">
+    <state width="1493" height="281" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
+    <state width="1493" height="281" key="GridCell.Tab.1.center" timestamp="1617702659649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1617522478496" />
+    <state width="1493" height="281" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
+    <state width="1493" height="281" key="GridCell.Tab.1.left" timestamp="1617702659649">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="281" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
+    <state width="1493" height="281" key="GridCell.Tab.1.right" timestamp="1617702659649">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="281" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
+    <state width="1493" height="276" key="GridCell.Tab.2.bottom" timestamp="1617697717493">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="276" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617697717493" />
+    <state width="1493" height="276" key="GridCell.Tab.2.center" timestamp="1617697717492">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="276" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1617697717492" />
+    <state width="1493" height="276" key="GridCell.Tab.2.left" timestamp="1617697717492">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="276" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1617697717492" />
+    <state width="1493" height="276" key="GridCell.Tab.2.right" timestamp="1617697717492">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="276" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1617697717492" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1617697801692">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1617697801692" />
+    <state x="270" y="57" key="SettingsEditor" timestamp="1617690287437">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617690287437" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1617545768778">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1617545768777" />
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617545609905">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1617545609905" />
     <state x="178" y="73" key="new project wizard" timestamp="1617520072018">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="178" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1617520072018" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/TtlReceive.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
