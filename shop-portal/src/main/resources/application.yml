@@ -48,4 +48,7 @@ secure:
 
 # 消息队列定义
 
+server:
+  port: 8082
+
 
