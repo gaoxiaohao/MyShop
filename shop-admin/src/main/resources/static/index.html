@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+
+<body>
+
+<ul>
+
+    <li>
+        <span>选择上传的文件：</span>
+        <input type="file" id="files"></li>
+    <li>
+        <button onclick="getOssSignature()">开始上传</button>
+    </li>
+</ul>
+
+</body>
+
+<script>
+    //发送ajax获取服务端签名
+    function getOssSignature(){
+        var file = $('#files').get(0).files[0];//获取需要上传的文件对象
+        //检测文件是否存在
+        if(!file){
+            alert('请先选择文件');
+            return false;
+        }
+        //获取上传的文件名，并得到文件后缀
+        var location=$("#files").val();
+        var point = location.lastIndexOf(".");
+        var file_type = location.substr(point);//获取文件后缀
+        var file_name = (new Date()).getTime() + file_type;//将OSS文件路径与新的文件名拼接在一起,生成新的路径+文件名
+
+        //发送ajax请求我方php后端获取上传OSS时必要的参数信息
+        $.ajax({
+            type : "get", //提交方式
+            url : "http://localhost:8080/policy",//路径
+            success : function(res) {//返回数据根据结果进行相应的处理
+                // res = JSON.parse(res);
+
+                //上返回的参数使用formData中
+                let formData = new FormData();
+                formData.append('key', res.dir+file_name);
+                formData.append('OSSAccessKeyId', res.accessKeyId);
+                formData.append('policy', res.policy);
+                formData.append('Signature', res.signature);
+                formData.append('callback', res.callback);
+                formData.append('file', file)
+                console.log("我在这");
+                //接收到服务端返回的签名参数，开始通过另一个Ajax请求来上传文件到OSS
+                //成功获取签名后上传文件到阿里云OSS
+                $.ajax({
+                    type : "POST", //提交方式
+                    url : res.host,//路径
+                    dataType:"json",
+                    processData: false,
+                    cache: false,
+                    async: false,
+                    contentType:false,
+                    //关键是要设置contentType 为false，不然发出的请求头 没有boundary
+                    //该参数是让jQuery去判断contentType
+                    //data:formData,
+                    data : [{"callback":formData.callback}],//要发送到OSS数据，使用我这个ajax的格式可避开跨域问题。
+                    success : function(data1) {//返回数据根据结果进行相应的处理
+                        console.log(data1);//返回success:ok 说明你就上传成功了
+                    }
+                });
+            }
+        });
+    }
+</script>
+
+</html>

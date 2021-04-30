@@ -22,47 +22,419 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5748dbde-d963-4e0e-81e0-b4ab3f2d01e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/config/MySecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/ShopPortalApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/bo/RabbitEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/TtlReceive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/TtlSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/config/RabbitmqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/HomeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/impl/HomeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/META-INF/shop-portal.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/RabbitEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/ShopPortalApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/FunoutReceive.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/RouteReceive.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/Sender.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/TtlReceive.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/TtlSender$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/TtlSender.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/config/RabbitmqConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/controller/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/HomeService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/HomeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_4_0_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_4_0_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_sync_4_0_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_3_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_3_0_6_RELEASE.xml" beforeDir="false" />
+    <list default="true" id="5748dbde-d963-4e0e-81e0-b4ab3f2d01e1" name="Default Changelist" comment="Rabbitmq 配置及延迟队列">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_50.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alipay_sdk_alipay_sdk_java_4_13_33_ALL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_credentials_java_0_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_dysmsapi20170525_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_endpoint_util_0_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_openapiutil_0_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_tea_1_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_tea_openapi_0_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_tea_rpc_0_0_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_tea_rpc_util_0_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_tea_util_0_2_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_carrotsearch_hppc_0_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_cbor_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_smile_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_spullara_mustache_java_compiler_0_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_9_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_tdunning_t_digest_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_49_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_logstash_logback_logstash_logback_encoder_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpasyncclient_4_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_nio_4_4_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_backward_codecs_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_grouping_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_highlighter_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_join_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_memory_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_misc_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial3d_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial_extras_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_suggest_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_65.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_62.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_65.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_elasticsearch_rest_client_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_elasticsearch_rest_high_level_client_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_cli_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_core_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_geo_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_secure_sm_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_x_content_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_jna_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_aggs_matrix_stats_client_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_lang_mustache_client_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_mapper_extras_client_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_parent_join_client_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_rank_eval_client_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_transport_netty4_client_7_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_1_5_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ini4j_ini4j_0_5_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jacoco_org_jacoco_agent_runtime_0_8_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_elasticsearch_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_elasticsearch_4_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/config/GlobalCorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/config/OssConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/OmsOrderReturnReasonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/OrderReturnApplyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/OrderSettingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/OssController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/ResourceCategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/ResourceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dao/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dao/OrderOperateHistoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dao/OrderReturnApplyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dao/ProductAttributeValueDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dao/ProductVerifyDad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dao/RoleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dao/SkuStockDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/MenuNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/MoneyInfoParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/OrderDeliveryParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/OrderDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/OrderQueryParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/OrderReturnApplyResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/OssCallbackParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/OssCallbackResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/OssPolicyResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/ProductParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/ProductQueryParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/ReceiverInfoParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/ReturnApplyQueryParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/UpdateAdminPasswordParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dto/UpdateStatusParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/log/WebLogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/MenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/OrderReturnApplyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/OrderReturnReasonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/OrderSettingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/OssService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/ResourceCategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/ResourceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/OrderReturnApplyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/OrderReturnReasonServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/OrderSettingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/OssServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/ResourceCategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/ResourceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/dao/OrderDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/dao/OrderOperateHistoryDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/dao/OrderReturnApplyDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/dao/ProductAttrbuteValueDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/dao/ProductVerifyDad.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/dao/SkuStockDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/shop-common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/api/CommonPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/api/CommonResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/api/IErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/api/ResultCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/config/BaseSwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/config/DruidConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/constant/AliYunConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/constant/SwaggerProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/doadmin/WebLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/service/RedisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/service/RedisServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/gxh/shop/util/RequestUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/api/CommonPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/api/CommonResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/api/IErrorCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/api/ResultCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/config/BaseSwaggerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/config/DruidConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/constant/AliYunConstant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/constant/SwaggerProperties$SwaggerPropertiesBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/constant/SwaggerProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/doadmin/WebLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/service/RedisService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/service/RedisServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/com/gxh/shop/util/RequestUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/target/shop-common-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/shop-elasticsearch.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/java/com/gxh/shop/EsProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/java/com/gxh/shop/ShopSearchApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/java/com/gxh/shop/controller/EsProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/java/com/gxh/shop/mapper/EsProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/java/com/gxh/shop/repository/EsProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/java/com/gxh/shop/service/EsProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/java/com/gxh/shop/service/impl/EsProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/src/main/resources/dao/EsProductMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/com/gxh/shop/EsProduct.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/com/gxh/shop/ShopSearchApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/com/gxh/shop/controller/EsProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/com/gxh/shop/mapper/EsProductMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/com/gxh/shop/repository/EsProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/com/gxh/shop/service/EsProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/com/gxh/shop/service/impl/EsProductServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/classes/dao/EsProductMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/docker/shop-elasticsearch-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/shop-elasticsearch-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/shop-elasticsearch-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-elasticsearch/target/test-classes/image_info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/bo/CartProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/bo/CartPromotionItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/bo/ConfirmOrderResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/bo/MemberDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/bo/OrderDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/bo/OrderParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/config/AliPayConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/config/MemberSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/config/MyBatisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/controller/CartItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/controller/OrderPayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/controller/PortalOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/dao/PortalOrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/dao/PortalOrderItemDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/CartItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/MemberAddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/PortalOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/impl/CartItemServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/impl/MemberServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/impl/PortalOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/dao/PortalOrderDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/dao/PortalOrderItemDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/static/toPayFor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/bo/CartProduct.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/bo/CartPromotionItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/bo/ConfirmOrderResult$CalcAmount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/bo/ConfirmOrderResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/bo/MemberDetails.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/bo/OrderDetails.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/bo/OrderParam.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/bo/RabbitEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/CancelOrderReceive.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/CancelOrderSender$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/CancelOrderSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/config/AliPayConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/config/MemberSecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/config/MyBatisConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/controller/CartItemController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/controller/OrderPayController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/controller/PortalOrderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/dao/PortalOrderDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/dao/PortalOrderItemDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/CartItemService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/MemberAddressService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/MemberService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/PortalOrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/impl/CartItemServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/impl/HomeServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/impl/MemberServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/impl/PortalOrderServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/dao/PortalOrderDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/dao/PortalOrderItemDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/classes/static/toPayFor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/docker/shop-portal-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/shop-portal-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/shop-portal-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-portal/target/test-classes/image_info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/DynamicAccessDecisionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/DynamicSecurityFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/DynamicSecurityMetadataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/DynamicSecurityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/RestfulAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/config/UrlsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_14_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_14_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_3_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_5_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_49_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_49_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_49_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_49_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_49_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_49_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_35.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_35.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_6_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_6_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_2_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_2_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_3_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_3_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_3_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_3_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_3_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_3_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_3_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_12_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_12_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_12_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_12_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/detail/AdminUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/detail/AdminUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/config/MyBatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/config/MyBatisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/config/MySecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/config/MySecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dao/AdminRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/dao/AdminRoleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/TestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/TestServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/application-prod.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/src/main/resources/dao/AdminRoleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/dao/AdminRoleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-mbg/shop-mbg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-mbg/shop-mbg.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-portal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-portal/shop-portal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/shop-portal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/TtlReceive.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/CancelOrderReceive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/TtlSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/CancelOrderSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/impl/HomeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/service/impl/HomeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/META-INF/shop-portal.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/target/classes/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/RabbitEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/FunoutReceive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/RouteReceive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/Sender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/TtlReceive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/TtlSender$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/component/TtlSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/config/RabbitmqConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/config/RabbitmqConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-portal/target/classes/com/gxh/shop/service/HomeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-security/shop-security.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-security/shop-security.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/config/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,14 +445,30 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JavaeeView">
+    <option name="showModules" value="false" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1qh6o7o7dqXIa8oQi1hQjQUFDSQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -88,37 +476,52 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop-admin/src/main/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.415" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\MyShop\shop-admin\src\main\resources" />
-      <recent name="D:\MyShop\shop-mbg\src\main\java\com\gxh\shop" />
-      <recent name="D:\MyShop\shop-mbg\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.gxh.shop" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyShop\shop-portal\src\main\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyShop\shop-portal\src\main\resources\dao" />
+      <recent name="D:\MyShop\shop-portal\src\main\java\com\gxh\shop\portal" />
+      <recent name="D:\MyShop\shop-admin\src\main\resources\dao" />
+      <recent name="D:\MyShop\shop-admin\src\main\java\com\gxh\shop\controller" />
+      <recent name="D:\MyShop\shop-common\src\main\java\com\gxh\shop" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gxh.shop.config" />
+      <recent name="com.gxh.shop" />
+      <recent name="com.gxh.shop.log" />
+      <recent name="com.gxh.shop.doadmin" />
+      <recent name="com.gxh.shop.security.component" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.gxh.shop.portal.component" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ShopPortalApplication">
@@ -127,7 +530,7 @@
       <module name="shop-mbg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gxh.shop.config.*" />
+          <option name="PATTERN" value="com.gxh.shop.security.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,13 +564,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShopSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="shop-elasticsearch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gxh.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gxh.shop.ShopSearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ShopPortalApplication" />
         <item itemvalue="Spring Boot.ShopAdminApplication" />
+        <item itemvalue="Spring Boot.ShopSearchApplication" />
         <item itemvalue="Application.Generator" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -184,8 +604,33 @@
       <workItem from="1617547510263" duration="1118000" />
       <workItem from="1617629827271" duration="313000" />
       <workItem from="1617633896435" duration="384000" />
-      <workItem from="1617669634426" duration="24006000" />
+      <workItem from="1617669634426" duration="24121000" />
+      <workItem from="1617982151892" duration="2221000" />
+      <workItem from="1618155134488" duration="36849000" />
+      <workItem from="1618240259820" duration="1725000" />
+      <workItem from="1618362342290" duration="1273000" />
+      <workItem from="1618388210868" duration="68000" />
+      <workItem from="1618400240259" duration="13243000" />
+      <workItem from="1618450948429" duration="8844000" />
+      <workItem from="1618583034384" duration="1368000" />
+      <workItem from="1618800235654" duration="11233000" />
+      <workItem from="1618815474001" duration="12142000" />
+      <workItem from="1619094898091" duration="854000" />
+      <workItem from="1619318720496" duration="3000000" />
+      <workItem from="1619432424313" duration="2620000" />
+      <workItem from="1619533537576" duration="3005000" />
+      <workItem from="1619660110938" duration="14572000" />
+      <workItem from="1619682579319" duration="14435000" />
+      <workItem from="1619701786602" duration="6008000" />
     </task>
+    <task id="LOCAL-00001" summary="Rabbitmq 配置及延迟队列">
+      <created>1617717483168</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617717483168</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,19 +648,44 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Rabbitmq 配置及延迟队列" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rabbitmq 配置及延迟队列" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1617633964021">
+    <state x="531" y="133" key="#Docker" timestamp="1619696408213">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1617633964021" />
-    <state x="880" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1617694847063">
+    <state x="531" y="133" key="#Docker/0.0.1536.824@0.0.1536.824" timestamp="1619696408213" />
+    <state x="395" y="91" key="#Inspections" timestamp="1618459418676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="880" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1617694847063" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617702814488">
+    <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1618459418676" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1618400341545">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617702814488" />
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1618400341545" />
+    <state x="880" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1619691134657">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="880" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1619691134657" />
+    <state x="434" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1619678756787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="434" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1619678756787" />
+    <state x="100" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1619321521384">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="100" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1619321521384" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619686583213">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619686583213" />
+    <state x="568" y="153" key="FileChooserDialogImpl" timestamp="1619703203750">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="568" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1619703203750" />
     <state x="640" y="310" key="Github.ShareDialog" timestamp="1617545277269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -224,102 +694,97 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="106" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617545369482" />
-    <state width="1493" height="281" key="GridCell.Tab.0.bottom" timestamp="1617702659649">
+    <state width="1493" height="507" key="GridCell.Tab.0.bottom" timestamp="1619707032128">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
-    <state width="1493" height="281" key="GridCell.Tab.0.center" timestamp="1617702659649">
+    <state width="1493" height="507" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619707032128" />
+    <state width="1493" height="507" key="GridCell.Tab.0.center" timestamp="1619707032128">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
-    <state width="1493" height="281" key="GridCell.Tab.0.left" timestamp="1617702659649">
+    <state width="1493" height="507" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1619707032128" />
+    <state width="1493" height="507" key="GridCell.Tab.0.left" timestamp="1619707032128">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
-    <state width="1493" height="281" key="GridCell.Tab.0.right" timestamp="1617702659649">
+    <state width="1493" height="507" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1619707032128" />
+    <state width="1493" height="507" key="GridCell.Tab.0.right" timestamp="1619707032128">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
-    <state width="1493" height="281" key="GridCell.Tab.1.bottom" timestamp="1617702659649">
+    <state width="1493" height="507" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1619707032128" />
+    <state width="1493" height="507" key="GridCell.Tab.1.bottom" timestamp="1619692007338">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
-    <state width="1493" height="281" key="GridCell.Tab.1.center" timestamp="1617702659649">
+    <state width="1493" height="507" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619692007338" />
+    <state width="1493" height="507" key="GridCell.Tab.1.center" timestamp="1619692007338">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
-    <state width="1493" height="281" key="GridCell.Tab.1.left" timestamp="1617702659649">
+    <state width="1493" height="507" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1619692007338" />
+    <state width="1493" height="507" key="GridCell.Tab.1.left" timestamp="1619692007338">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
-    <state width="1493" height="281" key="GridCell.Tab.1.right" timestamp="1617702659649">
+    <state width="1493" height="507" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1619692007338" />
+    <state width="1493" height="507" key="GridCell.Tab.1.right" timestamp="1619692007338">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="281" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617702659649" />
-    <state width="1493" height="276" key="GridCell.Tab.2.bottom" timestamp="1617697717493">
+    <state width="1493" height="507" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1619692007338" />
+    <state width="1493" height="347" key="GridCell.Tab.2.bottom" timestamp="1618815423241">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617697717493" />
-    <state width="1493" height="276" key="GridCell.Tab.2.center" timestamp="1617697717492">
+    <state width="1493" height="347" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1618815423241" />
+    <state width="1493" height="347" key="GridCell.Tab.2.center" timestamp="1618815423241">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1617697717492" />
-    <state width="1493" height="276" key="GridCell.Tab.2.left" timestamp="1617697717492">
+    <state width="1493" height="347" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1618815423241" />
+    <state width="1493" height="347" key="GridCell.Tab.2.left" timestamp="1618815423241">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1617697717492" />
-    <state width="1493" height="276" key="GridCell.Tab.2.right" timestamp="1617697717492">
+    <state width="1493" height="347" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1618815423241" />
+    <state width="1493" height="347" key="GridCell.Tab.2.right" timestamp="1618815423241">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1617697717492" />
-    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1617697801692">
+    <state width="1493" height="347" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1618815423241" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1619693609333">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1617697801692" />
-    <state x="270" y="57" key="SettingsEditor" timestamp="1617690287437">
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1619693609333" />
+    <state x="270" y="0" key="SettingsEditor" timestamp="1619703270913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617690287437" />
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1619703270913" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1617545768778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1617545768777" />
-    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617545609905">
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617717531082">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1617545609905" />
-    <state x="178" y="73" key="new project wizard" timestamp="1617520072018">
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1617717531082" />
+    <state x="178" y="73" key="new project wizard" timestamp="1619699981329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="178" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1617520072018" />
+    <state x="178" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1619699981329" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/OssServiceImpl.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/shop-admin/src/main/java/com/gxh/shop/service/impl/OssServiceImpl.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/DynamicSecurityFilter.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/JwtAuthenticationTokenFilter.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shop-portal/src/main/java/com/gxh/shop/component/TtlReceive.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/shop-security/src/main/java/com/gxh/shop/security/component/DynamicSecurityMetadataSource.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

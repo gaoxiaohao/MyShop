@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: shop-search
+  profiles:
+    active: prod #默认为开发环境
+
+server:
+  port: 8082
+
+mybatis:
+  mapper-locations:
+    - classpath:dao/*.xml
+    - classpath*:com/**/mapper/*.xml
+
+
+

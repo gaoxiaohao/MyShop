@@ -1,0 +1,7 @@
+com\gxh\shop\EsProduct.class
+com\gxh\shop\mapper\EsProductMapper.class
+com\gxh\shop\repository\EsProductRepository.class
+com\gxh\shop\ShopSearchApplication.class
+com\gxh\shop\service\EsProductService.class
+com\gxh\shop\service\impl\EsProductServiceImpl.class
+com\gxh\shop\controller\EsProductController.class

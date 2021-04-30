@@ -7,15 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shop-mbg" />
-        <module name="shop-security" />
+        <module name="shop-common" />
         <module name="shop-admin" />
+        <module name="shop-security" />
+        <module name="shop-mbg" />
         <module name="shop-portal" />
+        <module name="shop-elasticsearch" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="MyShop" target="1.8" />
       <module name="shop-admin" target="1.8" />
+      <module name="shop-common" target="1.8" />
+      <module name="shop-elasticsearch" target="1.8" />
       <module name="shop-mbg" target="1.8" />
       <module name="shop-portal" target="1.8" />
       <module name="shop-security" target="1.8" />
@@ -24,6 +28,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="shop-admin" options="-parameters" />
+      <module name="shop-common" options="-parameters" />
+      <module name="shop-elasticsearch" options="-parameters" />
       <module name="shop-mbg" options="-parameters" />
       <module name="shop-portal" options="-parameters" />
       <module name="shop-security" options="-parameters" />

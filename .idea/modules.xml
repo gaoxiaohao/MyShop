@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MyShop.iml" filepath="$PROJECT_DIR$/.idea/MyShop.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-common/shop-common.iml" filepath="$PROJECT_DIR$/shop-common/shop-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-elasticsearch/shop-elasticsearch.iml" filepath="$PROJECT_DIR$/shop-elasticsearch/shop-elasticsearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-mbg/shop-mbg.iml" filepath="$PROJECT_DIR$/shop-mbg/shop-mbg.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-portal/shop-portal.iml" filepath="$PROJECT_DIR$/shop-portal/shop-portal.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-security/shop-security.iml" filepath="$PROJECT_DIR$/shop-security/shop-security.iml" />

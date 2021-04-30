@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gxh.shop.dao.AdminRoleDao">
+    <insert id="insertList">
+        insert into s_admin_role_relation (admin_id ,role_id) values(
+        <foreach collection="list" separator="," item="item" index="index">
+            (#{item.adminId,jdbcType=BIGINT},
+            #{item.roleId,jdbcType=BIGINT})
+        </foreach>
+        )
+
+    </insert>
 
     <select id="getResourceList" resultType="com.gxh.shop.model.SResource">
         SELECT
@@ -21,5 +30,17 @@
         GROUP BY
             ur.id
     </select>
+    <select id="getAdminIdList" resultType="java.lang.Long">
+       select  distinct ar.admin_id
+       from role_resource ar left  join  s_admin_role_relation rr on
+       ar.role_id = rr.role_id  where rr.resource_id=#{resourceId}
+
+    </select>
+    <select id="getRoleList" resultType="com.gxh.shop.model.SRole">
+        select r.*
+        from s_admin_role_relation ar left join s_role r on ar.role_id = r.id
+        where ar.admin_id = #{adminId}
+    </select>
+
 
 </mapper>
