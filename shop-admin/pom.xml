@@ -49,7 +49,10 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
+
+
             </plugin>
+
         </plugins>
     </build>
 </project>

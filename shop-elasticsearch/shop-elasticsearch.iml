@@ -216,7 +216,7 @@
     <orderEntry type="library" name="Maven: com.squareup.okio:okio:1.17.2" level="project" />
     <orderEntry type="library" name="Maven: org.jacoco:org.jacoco.agent:runtime:0.8.4" level="project" />
     <orderEntry type="library" name="Maven: com.aliyun:tea-openapi:0.0.7" level="project" />
-    <orderEntry type="library" name="Maven: com.aliyun:openapiutil:0.1.6" level="project" />
+    <orderEntry type="library" name="Maven: com.aliyun:openapiutil:0.1.7" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.65" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.65" level="project" />
   </component>
