@@ -5,7 +5,7 @@ spring:
     active: prod #默认为开发环境
 
 server:
-  port: 8082
+  port: 8083
 
 mybatis:
   mapper-locations:
