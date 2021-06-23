@@ -20,7 +20,7 @@ import java.util.List;
  * @author gxh
  */
 @Controller
-@Api(tags = "OrderReturnApplyController")
+@Api(tags = "OrderReturnApplyController-订单退货申请管理")
 @RequestMapping("/returnApply")
 public class OrderReturnApplyController {
     @Autowired

@@ -16,7 +16,7 @@ import java.util.List;
  * @author gxh
  */
 @RestController
-@Api(tags = "UmsMenuController")
+@Api(tags = "MenuController-菜单管理")
 @RequestMapping("/menu")
 public class MenuController {
 

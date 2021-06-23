@@ -14,11 +14,12 @@ import java.util.List;
 
 /**
  * 退货原因管理Controller
+ * @author gxh
  */
 @Controller
-@Api(tags = "OmsOrderReturnReasonController")
+@Api(tags = "OrderReturnReasonController-订单退货管理")
 @RequestMapping("/returnReason")
-public class OmsOrderReturnReasonController {
+public class OrderReturnReasonController {
     @Autowired
     private OrderReturnReasonService orderReturnReasonService;
 

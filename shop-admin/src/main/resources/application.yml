@@ -2,11 +2,12 @@ spring:
   application:
     name: shop-admin
   profiles:
-    active: prod #默认为开发环境
+    active: dev #默认为开发环境
   servlet:
     multipart:
       enabled: true #开启文件上传
       max-file-size: 10MB #限制文件上传大小为10M
+      
 
 mybatis:
   mapper-locations:
@@ -15,19 +16,11 @@ mybatis:
 
 jwt:
   tokenHeader: Authorization #JWT存储的请求头
-  secret: mall-admin-secret #JWT加解密使用的密钥
+  secret: shop-admin-secret #JWT加解密使用的密钥
   expiration: 604800 #JWT的超期限时间(60*60*24*7)
   tokenHead: 'Bearer '  #JWT负载中拿到开头
 
 
-#
-#redis:
-#  key:
-#    prefix:
-#      authCode: "portal:authCode:"
-#    expire:
-#      authCode: 120 # 验证码超期时间
-#
 secure:
   ignored:
     urls: #安全路径白名单
@@ -42,33 +35,26 @@ secure:
       - /webjars/springfox-swagger-ui/**
       - /actuator/**
       - /druid/**
-      - /login
+      - /admin/login
       - /admin/register
       - /admin/info
       - /admin/logout
-      - /minio/upload
 
 
 
 # OSS相关配置信息
 aliyun:
   oss:
-    callback: http://localhost:8080/callback
+    callback: http://192.168.1.5:8081/callback
     endpoint: oss-cn-beijing.aliyuncs.com # oss对外服务的访问域名
-    accessKeyId: LTAIRY5MouklfnHW # 访问身份验证中用到用户标识
-    accessKeySecret: CU2XWWdI5sqd7KYJwJX8C2sOn300YS # 用户用于加密签名字符串和oss用来验证签名字符串的密钥
-    bucketName: gzh0302 # oss的存储空间
+    accessKeyId:  # 访问身份验证中用到用户标识
+    accessKeySecret:  # 用户用于加密签名字符串和oss用来验证签名字符串的密钥
+    bucketName:  # oss的存储空间
     policy:
       expire: 300 # 签名有效期(S)
     maxSize: 10 # 上传文件大小(M)
     dir:
       prefix: amages/ # 上传文件夹路径前缀
 
-#
-#minio:
-#  endpoint: http://192.168.3.101:9090 #MinIO服务所在地址
-#  bucketName: mall #存储桶名称
-#  accessKey: minioadmin #访问的key
-#  secretKey: minioadmin #访问的秘钥
 server:
   port: 8081

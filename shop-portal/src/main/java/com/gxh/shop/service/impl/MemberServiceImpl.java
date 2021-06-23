@@ -69,10 +69,8 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void register(String username, String password, String telephone, String authCode) {
         //验证验证码
-        if(!verifyAuthCode(authCode,telephone)){
-           // Asserts.fail("验证码错误");
-        }
-        //查询是否已有该用户
+        verifyAuthCode(authCode, telephone);// Asserts.fail("验证码错误");
+//查询是否已有该用户
         SMemberExample example = new SMemberExample();
         example.createCriteria().andUsernameEqualTo(username);
         example.or(example.createCriteria().andPhoneEqualTo(telephone));
@@ -105,7 +103,7 @@ public class MemberServiceImpl implements MemberService {
             return false;
         }
         //String realAuthCode = memberCacheService.getAuthCode(telephone);
-        return authCode.equals("realAuthCode");
+        return "realAuthCode".equals(authCode);
     }
 
     @Override

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gxh.shop.dao.RoleDao">
+
+    <select id="getMenuList" resultType="com.gxh.shop.model.SMenu">
+        SELECT
+            m.id id,
+            m.parent_id parentId,
+            m.create_time createTime,
+            m.title title,
+            m.level level,
+            m.sort sort,
+            m.name name,
+            m.icon icon,
+            m.hidden hidden
+            from
+            s_admin_role_relation  sarr
+            left join s_role sr on sr.id = sarr.role_id
+            left join s_role_menu srm on srm.role_id = sr.id
+            left join s_menu m on srm.menu_id = m.id
+            where
+            sarr.admin_id = #{adminId}
+            and m.id is not null
+            group by m.id
+            
+    </select>
+    <select id="getMenuListByRoleId" resultType="com.gxh.shop.model.SMenu">
+
+        select
+         m.id id,
+            m.parent_id parentId,
+            m.create_time createTime,
+            m.title title,
+            m.level level,
+            m.sort sort,
+            m.name name,
+            m.icon icon,
+            m.hidden hidden
+            from s_role_menu srm
+            left join s_role sr on sr.id = srm.role_id
+            left join s_menu m on srm.menu_id = m.id
+            where
+            srm.role_id = #{roleId}
+            and m.id is not null
+            group by m.id
+
+
+
+
+    </select>
+    <select id="getResourceListByRoleId" resultType="com.gxh.shop.model.SResource">
+
+
+        SELECT
+            r.id id,
+            r.create_time createTime,
+            r.`name` `name`,
+            r.url url,
+            r.description description,
+            r.category_id categoryId
+        FROM
+            s_role_resource rrr
+                LEFT JOIN s_resource r ON rrr.resource_id = r.id
+        WHERE
+            rrr.role_id = #{roleId}
+          AND r.id IS NOT NULL
+        GROUP BY
+            r.id
+
+    </select>
+
+</mapper>

@@ -17,7 +17,7 @@ import java.util.List;
  * @author gxh
  */
 @RestController
-@Api(tags = "UmsRoleController")
+@Api(tags = "RoleController-角色管理")
 @RequestMapping("/role")
 public class RoleController {
 

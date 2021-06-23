@@ -28,7 +28,7 @@ import java.util.Random;
  */
 @Controller
 @Slf4j
-@Api(tags = "OssController")
+@Api(tags = "OssController-阿里云上传管理")
 @RequestMapping("/oss")
 public class OssController {
 
@@ -77,7 +77,7 @@ public class OssController {
     }
 
 
-    @ApiOperation("验证码教研")
+    @ApiOperation("验证码校验")
     @RequestMapping(value = "/verifyAuthCode", method = RequestMethod.GET)
     public CommonResult<String> verifyAuthCode(@RequestParam String code,@RequestParam String phone) throws Exception {
         if (StringUtils.isEmpty(code)) {

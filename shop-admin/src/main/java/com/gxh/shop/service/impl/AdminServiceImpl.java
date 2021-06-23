@@ -12,6 +12,7 @@ import com.gxh.shop.mapper.SAdminRoleRelationMapper;
 import com.gxh.shop.model.*;
 import com.gxh.shop.security.util.JwtTokenUtil;
 import com.gxh.shop.service.AdminService;
+import com.gxh.shop.service.RedisService;
 import com.gxh.shop.util.RequestUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +52,8 @@ public class AdminServiceImpl implements AdminService {
     private AdminRoleDao adminRoleRelationDao;
     @Autowired
     private SAdminLoginLogMapper loginLogMapper;
+    @Autowired
+    private RedisService redisService;
 
     @Override
     public SAdmin getAdminByUsername(String username) {
@@ -116,13 +119,18 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public List<SAdmin> list(String keyword, Integer pageSize, Integer pageNum) {
         PageHelper.startPage(pageNum, pageSize);
-        SAdminExample example = new SAdminExample();
-        SAdminExample.Criteria criteria = example.createCriteria();
-        if (!StringUtils.isEmpty(keyword)) {
-            criteria.andUsernameLike("%" + keyword + "%");
-            example.or(example.createCriteria().andNickNameLike("%" + keyword + "%"));
+        List<SAdmin> o = (List<SAdmin>) redisService.get("admin:list");
+        if (o==null){
+            SAdminExample example = new SAdminExample();
+            SAdminExample.Criteria criteria = example.createCriteria();
+            if (!StringUtils.isEmpty(keyword)) {
+                criteria.andUsernameLike("%" + keyword + "%");
+                example.or(example.createCriteria().andNickNameLike("%" + keyword + "%"));
+            }
+            List<SAdmin> list = adminMapper.selectByExample(example);
+            redisService.set("admin:list",list);
         }
-        return adminMapper.selectByExample(example);
+        return o;
     }
 
     @Override

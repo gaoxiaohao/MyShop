@@ -57,6 +57,7 @@
         <hutool.version>5.4.0</hutool.version>
         <nimbus-jose-jwt.version>9.8.1</nimbus-jose-jwt.version>
         <com.alipay.sdk.version>4.13.33.ALL</com.alipay.sdk.version>
+        <commons-pool2.version>2.9.0</commons-pool2.version>
     </properties>
 
 
@@ -119,6 +120,12 @@
                 <artifactId>shop-mbg</artifactId>
                 <groupId>org.example</groupId>
                 <version>${shop-mbg.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons-pool2.version}</version>
             </dependency>
             <!--安全模块-->
             <dependency>
@@ -183,6 +190,8 @@
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
+
+
             <!--Mysql数据库驱动-->
             <dependency>
                 <groupId>mysql</groupId>

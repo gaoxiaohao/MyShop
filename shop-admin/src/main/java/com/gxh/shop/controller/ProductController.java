@@ -8,6 +8,7 @@ import com.gxh.shop.model.PProduct;
 import com.gxh.shop.service.ProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,8 @@ import java.util.List;
  * @author gxh
  */
 @RestController
-@Api(tags = "PmsProductController")
+@Slf4j
+@Api(tags = "ProductController-商品管理")
 @RequestMapping("/product")
 public class ProductController {
 
@@ -42,6 +44,7 @@ public class ProductController {
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult<Integer> update(@PathVariable Long id, @RequestBody ProductParam productParam) {
+        log.error("id:"+id +"param"+productParam.getPublishStatus());
         int count = productService.update(id, productParam);
         if (count > 0) {
             return CommonResult.success(count);

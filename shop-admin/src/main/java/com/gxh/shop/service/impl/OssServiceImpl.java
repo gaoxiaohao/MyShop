@@ -38,7 +38,7 @@ public class OssServiceImpl implements OssService {
     private String ALIYUN_OSS_ENDPOINT;
     @Value("${aliyun.oss.dir.prefix}")
     private String ALIYUN_OSS_DIR_PREFIX;
-    @Autowired
+
     private OSSClient ossClient;
 
 
@@ -83,9 +83,7 @@ public class OssServiceImpl implements OssService {
         } catch (Exception e) {
             log.error("签名生成失败", e);
         }
-        finally {
-            ossClient.shutdown();
-        }
+
         return result;
     }
 

@@ -17,7 +17,7 @@ import java.util.List;
  */
 
 @RestController
-@Api(tags = "UmsResourceController")
+@Api(tags = "ResourceController-资源管理")
 @RequestMapping("/resource")
 public class ResourceController {
 

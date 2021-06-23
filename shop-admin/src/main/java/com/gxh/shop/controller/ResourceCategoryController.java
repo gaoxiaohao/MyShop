@@ -14,7 +14,7 @@ import java.util.List;
  * @author gxh
  */
 @RestController
-@Api(tags = "UmsResourceCategoryController")
+@Api(tags = "ResourceCategoryController-资源类型管理")
 @RequestMapping("/resourceCategory")
 public class ResourceCategoryController {
 

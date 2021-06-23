@@ -21,6 +21,7 @@ import java.security.Principal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @author gxh
@@ -82,13 +83,12 @@ public class AdminController {
         data.put("menus", roleService.getMenuList(umsAdmin.getId()));
         data.put("icon", umsAdmin.getIcon());
         List<SRole> roleList = adminService.getRoleList(umsAdmin.getId());
-        List<String> roles =null;
         if (CollUtil.isNotEmpty(roleList)){
-            for (SRole role:roleList){
-                roles.add(role.getName());
-            }
+            List<String> roles = roleList.stream().map(SRole::getName)
+                    .collect(Collectors.toList());
+            data.put("roles",roles);
         }
-        data.put("roles",roles);
+                                                            
         return CommonResult.success(data);
     }
 

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author gxh
  */
-@Configuration
+
 public class OssConfig {
 
     @Value("${aliyun.oss.endpoint}")
@@ -17,6 +17,7 @@ public class OssConfig {
     private String ALIYUN_OSS_ACCESSKEYID;
     @Value("${aliyun.oss.accessKeySecret}")
     private String ALIYUN_OSS_ACCESSKEYSECRET;
+
     @Bean
     public OSSClient ossClient(){
         return new OSSClient(ALIYUN_OSS_ENDPOINT,ALIYUN_OSS_ACCESSKEYID,ALIYUN_OSS_ACCESSKEYSECRET);
